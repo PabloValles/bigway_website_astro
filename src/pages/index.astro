@@ -1,15 +1,14 @@
 ---
 import Background from "@/components/Background.astro";
 import Layout from "@/layouts/Layout.astro";
-import Header from "@/sections/Header.astro";
-import Footer from "@/sections/Footer.astro";
 import Hero from "@/sections/Hero.astro";
+import Partners from "@/sections/Partners.astro";
 ---
 
 <Layout title='Bigway Website'>
-  <Header />
-  <Hero />
-  <main></main>
-  <Background />
-  <Footer />
+  <main id='content'>
+    <Hero />
+    <Partners />
+  </main>
+  <!-- <Background /> -->
 </Layout>
