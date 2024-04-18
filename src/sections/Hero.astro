@@ -3,41 +3,52 @@ import { Image } from "astro:assets";
 import heroImage from "@/assets/images/robot_hero.png";
 ---
 
-<div
+<section
   class="relative overflow-hidden before:absolute before:top-0 before:start-1/2 before:bg-[url('https://preline.co/assets/svg/examples/squared-bg-element.svg')] before:bg-no-repeat before:bg-top before:size-full before:-z-[1] before:transform before:-translate-x-1/2 dark:before:bg-[url('https://preline.co/assets/svg/examples-dark/squared-bg-element.svg')]"
+  id='hero'
 >
-  <div class='max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 lg:py-10 xl:py-24'>
+  <div
+    class='max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 xl:py-20'
+  >
     <!-- Grid -->
-    <div class='grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center'>
-      <div class='lg:col-span-3 flex flex-col items-start justify-center gap-5'>
+    <div class='grid md:grid-cols-7 md:gap-x-8 xl:gap-x-12 md:items-center'>
+      <div
+        class='md:col-span-3 flex flex-col items-center md:items-start justify-center gap-5'
+      >
         <h1
-          class='block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl dark:text-white'
+          class='text-4xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl text-center md:text-left dark:text-gray-100 animate-blurred-fade-in'
         >
           Conexión de Internet de alta velocidad
         </h1>
-        <p class='mt-3 text-lg text-gray-800 dark:text-gray-400'>
+        <p
+          class='mt-3 text-lg text-gray-800 dark:text-gray-400 text-center md:text-left animate-fade-in'
+        >
           Disfruta de una experiencia de navegación sin límites con nuestro
           servicio de Internet de alta velocidad.
         </p>
 
-        <div
-          class='mt-5 lg:mt-8 flex flex-col items-center gap-2 sm:flex-row sm:gap-3'
-        >
+        <div class='mt-5 lg:mt-8 flex items-center gap-2 sm:flex-row sm:gap-3'>
           <a
             class='w-full sm:w-auto py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-purple-600 text-white hover:bg-purple-700 disabled:opacity-50 disabled:pointer-events-none'
             href='#'
           >
             Servicios
           </a>
+          <a
+            class='w-full sm:w-auto py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-secondary text-gray-800 hover:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none'
+            href='#'
+          >
+            Contacto
+          </a>
         </div>
       </div>
       <!-- End Col -->
 
-      <div class='lg:col-span-4 mt-10 lg:mt-0 flex items-center justify-center'>
+      <div class='md:col-span-4 mt-10 md:mt-0 flex items-center justify-center'>
         <Image
           src={heroImage}
           alt='Hero Image'
-          class='max-h-80 xl:max-h-[30rem] w-auto'
+          class='max-h-80 xl:max-h-[30rem] w-auto animate-slide-out-top transition-transform duration-500 ease-in-out'
         />
       </div>
 
@@ -45,4 +56,4 @@ import heroImage from "@/assets/images/robot_hero.png";
     </div>
     <!-- End Grid -->
   </div>
-</div>
+</section>
